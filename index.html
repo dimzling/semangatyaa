@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivasi untuk Safaa 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* === CSS tetap sama seperti sebelumnya === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(200, 0, 255, 0.8), 0 0 20px rgba(200, 0, 255, 0.5);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+      text-shadow: 0 0 10px rgba(180, 0, 255, 0.7);
+    }
+
+    .photo {
+      margin: 30px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(200, 0, 255, 0.9);
+      box-shadow: 0 0 15px rgba(200, 0, 255, 0.9), 0 0 25px rgba(200, 0, 255, 0.7);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .motivasi {
+      margin: 20px auto;
+      max-width: 650px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      padding: 25px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(200,0,255,0.4);
+      box-shadow: 0 0 12px rgba(200,0,255,0.8), 0 0 25px rgba(200,0,255,0.6);
+      animation: fadeUp 2.5s ease-in-out;
+      min-height: 80px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.9);
+      color: #a020f0;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(200,0,255,0.7);
+    }
+
+    button:hover {
+      background: #a020f0;
+      color: #fff;
+      transform: scale(1.07);
+      box-shadow: 0 0 15px rgba(200,0,255,0.9), 0 0 30px rgba(200,0,255,0.7);
+    }
+
+    .hai-section {
+      margin: 60px auto;
+      max-width: 750px;
+      padding: 20px;
+    }
+
+    .hai-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 12px rgba(200,0,255,0.8);
+    }
+
+    .hai-text {
+      margin: 20px 0;
+      padding: 18px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      font-size: 1.1rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+      border: 1px solid rgba(200,0,255,0.5);
+      box-shadow: 0 0 10px rgba(200,0,255,0.7);
+    }
+
+    .hai-text.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .galeri {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .galeri h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-shadow: 0 0 12px rgba(200,0,255,0.8);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 2px solid rgba(200,0,255,0.6);
+      box-shadow: 0 0 15px rgba(200,0,255,0.7);
+      transition: 0.4s;
+    }
+
+    .grid img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(200,0,255,1), 0 0 35px rgba(200,0,255,0.9);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-15px);}
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="https://files.catbox.moe/nbnneo.mp4" type="video/mp4">
+  </video>
+
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://files.catbox.moe/nbnneo.mp4" type="audio/mp4">
+  </audio>
+
+  <header>
+    <h1>✨ Hai Safaa! ✨</h1>
+    <p>Kamu adalah cahaya yang selalu bersinar, jangan pernah ragu pada dirimu 🌟</p>
+  </header>
+
+  <div class="photo">
+    <img src="https://files.catbox.moe/5befp8.jpg" alt="Foto Safaa">
+  </div>
+
+  <div class="motivasi" id="motivasiText">
+    Hidup ini penuh tantangan, tapi Safaa pasti bisa melewatinya dengan senyum manis 💖
+  </div>
+
+  <button onclick="tampilkanMotivasi()">Dapatkan Motivasi Lagi</button>
+
+  <!-- Bagian Hai Safaa -->
+  <section class="hai-section">
+    <h2>🌸 Pesan-pesan untuk Safaa 🌸</h2>
+
+    <div class="hai-text">Hai Safaa, jangan lupa kamu itu sangat berharga 💖</div>
+    <div class="hai-text">Hai Safaa, senyummu bisa membuat dunia jadi lebih indah 🌼</div>
+    <div class="hai-text">Hai Safaa, teruslah percaya pada mimpi-mimpimu ✨</div>
+    <div class="hai-text">Hai Safaa, kamu kuat meskipun kadang merasa lelah 🌈</div>
+    <div class="hai-text">Hai Safaa, dunia ini lebih indah karena ada kamu 🌹</div>
+    <div class="hai-text">Hai Safaa, jangan pernah berhenti jadi dirimu sendiri 🌟</div>
+    <div class="hai-text">Hai Safaa, setiap langkahmu adalah inspirasi 💪</div>
+    <div class="hai-text">Hai Safaa, semoga setiap harimu dipenuhi kebahagiaan 🌸</div>
+    <div class="hai-text">Hai Safaa, jangan biarkan kesedihan menghapus semangatmu 🌞</div>
+    <div class="hai-text">Hai Safaa, kamu bisa melewati semua tantangan dengan hebat 💫</div>
+  </section>
+
+  <!-- Galeri Foto -->
+  <section class="galeri">
+    <h2>📸 Galeri Foto Safaa</h2>
+    <div class="grid">
+      <img src="https://files.catbox.moe/jxw2dj.jpg" alt="Foto 1">
+      <img src="https://files.catbox.moe/m72beq.jpg" alt="Foto 2">
+      <img src="https://files.catbox.moe/cy8vza.jpg" alt="Foto 3">
+      <img src="https://files.catbox.moe/l2epll.jpg" alt="Foto 4">
+      <img src="https://files.catbox.moe/pf4cjg.jpg" alt="Foto 5">
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    const motivasiList = [
+  "Tetap semangat ya Safaa, hari-hari indah menunggumu 🌈",
+  "Senyummu adalah kekuatanmu yang paling indah 🌸",
+  "Safaa, kamu bisa mewujudkan semua mimpimu ✨",
+  "Jangan biarkan rasa takut menghalangi langkahmu 💖",
+  "Kamu pantas bahagia, Safaa 🌹",
+  "Safaa, kalau kamu nyerah sekarang, kamu bakal nyesel besok 💥",
+  "Bangkit! Karena gak ada yang bakal ngangkat kamu selain dirimu sendiri 🚀",
+  "Kamu bukan lemah, kamu cuma lagi istirahat. Sekarang waktunya maju lagi 🔥",
+  "Berhenti overthinking, mulai action sekarang juga ⚡",
+  "Kalau kamu terus diem, mimpi orang lain yang bakal terwujud, bukan mimpimu ⚔️",
+  "Lelah itu wajar, tapi jangan jadikan alasan buat berhenti 💪",
+  "Jangan tunggu mood, sukses itu butuh disiplin ⏳",
+  "Hidup gak bakal nunggu kamu siap, jadi jangan buang waktu lagi 🕰️",
+  "Safaa, dunia ini keras, tapi kamu jauh lebih keras 💎",
+  "Kalau jatuh 100 kali, bangkit 101 kali. Titik. 🔥"
+];
+
+// Typewriter effect
+function typeWriterEffect(text, elementId, speed = 40) {
+  let i = 0;
+  const element = document.getElementById(elementId);
+  element.textContent = "";
+  const interval = setInterval(() => {
+    element.textContent += text.charAt(i);
+    i++;
+    if (i > text.length) {
+      clearInterval(interval);
+    }
+  }, speed);
+}
+
+function tampilkanMotivasi() {
+  const random = Math.floor(Math.random() * motivasiList.length);
+  typeWriterEffect(motivasiList[random], "motivasiText");
+}
+
+// Scroll Reveal
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.hai-text');
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("reveal");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// Musik play setelah interaksi
+document.body.addEventListener("click", () => {
+  const music = document.getElementById("bg-music");
+  if (music.paused) {
+    music.play().catch(err => console.log("Autoplay dicegah:", err));
+  }
+}, { once: true });
+  </script>
+</body>
+      </html>
